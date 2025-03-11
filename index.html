@@ -1,19 +1,109 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOODesign</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <img src="public/Frame 2036092512.png" alt="Section 1" />
-      <img src="public/Frame 2036092500.png" alt="Section 2" />
-      <img src="public/Frame 2036092504.png" alt="Section 3" />
-      <img src="public/Frame 2036092505.png" alt="Section 4" />
-      <img src="public/合作公司.png" alt="Section 5" />
-      <img src="public/Frame 2036092073.png" alt="Section 6" />
-    </div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 隐藏滚动条，但支持滑动 */
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-container {
+            scrollbar-width: none; /* 兼容 Firefox */
+            -webkit-overflow-scrolling: touch; /* 让滑动更流畅 */
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <!-- 作品展示区 -->
+    <section class="pb-16">
+        <header class="px-32 pt-16 pb-10 w-full text-5xl font-black tracking-[4.8px]">
+            <h2><span style="font-weight: 500">用界面</span> 连接数字与情感</h2>
+        </header>
+
+        <!-- 滚动容器 -->
+        <div class="overflow-x-scroll scroll-container scroll-smooth snap-x snap-mandatory -mx-6 px-6">
+            <div class="flex flex-nowrap gap-6 items-center w-max">
+                
+                <!-- 统一卡片样式 -->
+                <style>
+                    .card {
+                        width: 374px; /* 固定卡片宽度 */
+                        height: 507px; /* 固定卡片高度 */
+                        border-radius: 40px;
+                        background-color: black;
+                        overflow: hidden;
+                        position: relative;
+                        flex-shrink: 0; /* 防止卡片缩小 */
+                        scroll-snap-align: start; /* 滚动对齐 */
+                    }
+                    .card img {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 0;
+                    }
+                    .card .text-content {
+                        position: relative;
+                        z-index: 10;
+                        padding: 2rem;
+                    }
+                </style>
+
+                <!-- AI分身应用 -->
+                <article class="card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a9d056541ce88bc14360d9a9594ab064373b6b13cdb7e92ab0f95f9b2e35adc?apiKey=e2c7ee795ac04f9e95def96041802fec" alt="AI分身应用">
+                    <div class="text-content">
+                        <h3 class="text-4xl font-semibold text-white">AI分身应用</h3>
+                        <p class="mt-1.5 text-2xl text-white">用AI打造用户的赛博人生</p>
+                    </div>
+                </article>
+
+                <!-- 虚拟相机应用 -->
+                <article class="card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/50b25c705dec108601e524504d20110b752a6f6518a588c91d103433e8ea2a07?apiKey=e2c7ee795ac04f9e95def96041802fec" alt="虚拟相机应用">
+                    <div class="text-content">
+                        <h3 class="text-4xl font-semibold text-white">虚拟相机应用</h3>
+                        <p class="mt-1.5 text-2xl text-white">打造极致拍照体验</p>
+                    </div>
+                </article>
+
+                <!-- 银发健康应用 -->
+                <article class="card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dd648defffe5448a42dd0b74d5c9796e206d7cd0fa24c0302243b181e74df73d?apiKey=e2c7ee795ac04f9e95def96041802fec" alt="银发健康应用">
+                    <div class="text-content">
+                        <h3 class="text-4xl font-semibold text-white">银发健康应用</h3>
+                        <p class="mt-1.5 text-2xl text-white">科技关怀老人的身心健康</p>
+                    </div>
+                </article>
+
+                <!-- 社会应急小程序 -->
+                <article class="card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3e0fa7df405c6dc0fe3b6c371ae68e8aee7f217c8f7b09692f6067d56cec013?apiKey=e2c7ee795ac04f9e95def96041802fec" alt="社会应急小程序">
+                    <div class="text-content">
+                        <h3 class="text-4xl font-semibold text-white">社会应急小程序</h3>
+                        <p class="mt-1.5 text-2xl text-white">连接志愿者学习急救知识</p>
+                    </div>
+                </article>
+
+                <!-- 游戏企业官网 -->
+                <article class="card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0762f8dae16df4ff2bbd502eafa42186b1874b5c?apiKey=e2c7ee795ac04f9e95def96041802fec" alt="游戏企业官网">
+                    <div class="text-content">
+                        <h3 class="text-4xl font-semibold text-white">游戏企业官网</h3>
+                        <p class="mt-1.5 text-2xl text-white">传递企业理念与愿景</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+</body>
 </html>
